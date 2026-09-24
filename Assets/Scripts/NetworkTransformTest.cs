@@ -1,16 +1,15 @@
+using System;
+using Unity.Netcode;
 using UnityEngine;
 
-public class NetworkTransformTest : MonoBehaviour
+public class NetworkTransformTest : NetworkBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (IsServer)
+        {
+            float theta = Time.time;
+            transform.position = new Vector3((float)Math.Cos(theta), 0.0f, (float)Math.Sin(theta));
+        }
     }
 }
