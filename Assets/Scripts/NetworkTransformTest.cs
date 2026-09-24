@@ -9,7 +9,7 @@ public class NetworkTransformTest : NetworkBehaviour
         if (IsServer)
         {
             float theta = Time.time;
-            transform.position = new Vector3((float)Math.Cos(theta), 0.0f, (float)Math.Sin(theta));
+            transform.position = new Vector3((float)Math.Cos(theta), 1.0f, (float)Math.Sin(theta));
         }
     }
 }
